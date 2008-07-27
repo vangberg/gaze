@@ -7,10 +7,21 @@ A very mellow start to begin with, and so it goes:
 .. after which the mighty, mighty browser is pointed towards [http://localhost:4567](http://localhost:4567)
 and all the fine Markdown-files shows up like perfectly pristine HTML pages.
 
+## Highlight That Syntax
+
+To enable syntax highlighting on your code blocks add
+
+    {:lang=ruby html_use_syntax=true}
+
+below your code block, with max three indentations.
+
+Add it to the top of the Markdown file to enable all over the place.
+
 ## Requirements Are OK
     
     require 'sinatra'
     require 'maruku'
+    require 'syntax'
 
 ## Punch me! With a Fork!
 Copyright (c) 2008 Harry Vangberg

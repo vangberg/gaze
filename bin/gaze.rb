@@ -3,6 +3,16 @@ $:.unshift File.dirname(__FILE__) + '/../sinatra/lib'
 require 'rubygems'
 require 'sinatra'
 require 'maruku'
+require 'haml'
+
+set :public, File.join(File.dirname(__FILE__) +'/../public/')
+
+module ::Haml::Filters::Maruku
+  include ::Haml::Filters::Base
+  def render(text)
+    Maruku.new(text).to_html
+  end
+end
 
 before do
   Dir.chdir(ARGV[0]) if ARGV[0] and File.basename(Dir.getwd) != File.basename(ARGV[0])
@@ -45,6 +55,8 @@ __END__
 @@layout
 !!!
 %html
+  %head
+    %link{:rel => 'stylesheet', :href => '/syntax.css', :type => 'text/css'}
   %body
     = yield
 
@@ -61,4 +73,5 @@ __END__
 - pages.each do |page|
   %a{:href => "/pages/#{page}"}= page
 %hr
-~@output
+:maruku
+  #{@output}
