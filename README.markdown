@@ -1,17 +1,14 @@
 # Gaze And The Use Of It
 A very mellow start to begin with, and so it goes:
-
+    
     $ cd dir/with/a/bunch/of/markdown/files
     $ ruby gaze.rb
-
-.. after which the mighty, mighty browser is pointed towards
-
-   http://localhost:4567
-
+    
+.. after which the mighty, mighty browser is pointed towards [http://localhost:4567](http://localhost:4567)
 and all the fine Markdown-files shows up like perfectly pristine HTML pages.
 
 ## Requirements Are OK
-
+    
     require 'sinatra'
     require 'maruku'
 

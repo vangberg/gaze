@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 $:.unshift File.dirname(__FILE__) + '/sinatra/lib'
 require 'rubygems'
 require 'sinatra'
