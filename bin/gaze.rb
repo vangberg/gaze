@@ -5,7 +5,7 @@ require 'sinatra'
 require 'maruku'
 
 before do
-  Dir.chdir(ARGV[0]) if ARGV[0]
+  Dir.chdir(ARGV[0]) if ARGV[0] and File.basename(Dir.getwd) != File.basename(ARGV[0])
 end
 
 helpers do
