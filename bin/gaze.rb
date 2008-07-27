@@ -4,6 +4,10 @@ require 'rubygems'
 require 'sinatra'
 require 'maruku'
 
+before do
+  Dir.chdir(ARGV[0]) if ARGV[0]
+end
+
 helpers do
   def get_dir
     File.basename(Dir.getwd)
