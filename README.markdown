@@ -9,7 +9,7 @@ and all the fine Markdown-files shows up like perfectly pristine HTML pages.
 
 ## Highlight That Syntax
 
-To enable syntax highlighting on your code blocks add
+To enable syntax highlighting on your Ruby code blocks add
 
     {:lang=ruby html_use_syntax=true}
 

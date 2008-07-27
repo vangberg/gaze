@@ -14,8 +14,8 @@ module ::Haml::Filters::Maruku
   end
 end
 
-before do
-  Dir.chdir(ARGV[0]) if ARGV[0] and File.basename(Dir.getwd) != File.basename(ARGV[0])
+configure do
+  Dir.chdir ARGV[0] if ARGV[0]
 end
 
 helpers do
