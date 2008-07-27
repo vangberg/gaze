@@ -13,7 +13,7 @@ helpers do
     File.basename(Dir.getwd)
   end
   def pages
-    @pages = Dir["*.markdown"]
+    Dir["*.markdown"]
   end
 end
 
@@ -22,6 +22,9 @@ get '/' do
 end
 
 get '/pages/' do
+  # If there is only one markdown file present, serve that instantly.
+  redirect "#{pages.first}" if pages.size == 1 
+
   haml :pages
 end
 
