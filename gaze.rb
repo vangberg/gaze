@@ -54,4 +54,4 @@ __END__
 - pages.each do |page|
   %a{:href => "/pages/#{page}"}= page
 %hr
-= @output
+~@output
