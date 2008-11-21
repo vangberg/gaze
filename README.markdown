@@ -9,7 +9,7 @@ Install the included gem or build it with gemify
 .. after which the mighty, mighty browser is pointed towards [http://localhost:4567](http://localhost:4567)
 and all the fine Markdown-files shows up like perfectly pristine HTML pages.
 
-## Highlight That Syntax
+## Highlight That Syntax (only Markdown, I guess)
 
 To enable syntax highlighting on your Ruby code blocks add
 
@@ -28,8 +28,8 @@ Add it to the top of the Markdown file to enable all over the place.
 
 gaze supports Markdown or Textile. Use the one you like best. Or both.
 
-    require 'maruku'
-    require 'RedCloth'
+    require 'maruku' # Markdown
+    require 'RedCloth' # Textile
 
 ## Punch me! With a Fork!
 Copyright (c) 2008 Harry Vangberg
