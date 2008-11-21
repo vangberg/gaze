@@ -1,8 +1,10 @@
 # Gaze And The Use Of It
 A very mellow start to begin with, and so it goes:
+
+Install the included gem or build it with gemify
     
     $ cd dir/with/a/bunch/of/markdown/files
-    $ ruby gaze.rb
+    $ gaze
     
 .. after which the mighty, mighty browser is pointed towards [http://localhost:4567](http://localhost:4567)
 and all the fine Markdown-files shows up like perfectly pristine HTML pages.
@@ -20,8 +22,14 @@ Add it to the top of the Markdown file to enable all over the place.
 ## Requirements Are OK
     
     require 'sinatra'
-    require 'maruku'
     require 'syntax'
+    
+## Formatting
+
+gaze supports Markdown or Textile. Use the one you like best. Or both.
+
+    require 'maruku'
+    require 'RedCloth'
 
 ## Punch me! With a Fork!
 Copyright (c) 2008 Harry Vangberg
