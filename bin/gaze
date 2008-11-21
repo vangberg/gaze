@@ -77,6 +77,9 @@ __END__
     
   %body
     #container= yield
+    #footer
+      powered by
+      %a{:href => 'http://github.com/ichverstehe/gaze'} gaze
 
 @@pages
 %h1= get_dir
@@ -102,9 +105,14 @@ h1,h2,h3,h4,h5,h6
   :font-family "Helvetica", sans-serif
 #container
   :width 520px
-  :margin 30px auto
+  :margin 30px auto 3px
   :padding 20px
   :background #fff
   :border 5px solid #ccc
   :-moz-border-radius 10px
   :-webkit-border-radius 10px
+#footer
+  :text-align center
+  :color #888
+  a
+    :color #888
