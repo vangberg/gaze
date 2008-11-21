@@ -3,21 +3,20 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 
-# Format options
-{:Markdown => 'maruku', 
- :Textile => 'RedCloth'}.each do |name, gem|
-  begin
-    require "#{gem}"
-  rescue LoadError => e
-    puts <<-MSG
-gaze will also format #{name}
+configure do
+  # Format options
+  {:Markdown => 'maruku', :Textile => 'RedCloth'}.each do |name, gem|
+    begin
+      require "#{gem}"
+    rescue LoadError => e
+      puts <<-MSG
+To format #{name} as well:
 $ sudo gem install #{gem}
 It is not needed though.
 MSG
+    end
   end
-end
 
-configure do
   Dir.chdir ARGV[0] if ARGV[0]
 end
 
