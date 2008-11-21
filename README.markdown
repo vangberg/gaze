@@ -21,7 +21,7 @@ gaze supports Markdown or Textile. Use the one you like best. Or both.
     require 'RedCloth' # Textile
 
 ## Punch me! With a Fork!
-Copyright (c) 2008 Harry Vangberg
+Copyright (c) 2008 Harry Vangberg, Mikkel Malmberg
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
