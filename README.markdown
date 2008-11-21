@@ -9,20 +9,9 @@ Install the included gem or build it with gemify
 .. after which the mighty, mighty browser is pointed towards [http://localhost:4567](http://localhost:4567)
 and all the fine Markdown-files shows up like perfectly pristine HTML pages.
 
-## Highlight That Syntax (only Markdown, I guess)
-
-To enable syntax highlighting on your Ruby code blocks add
-
-    {:lang=ruby html_use_syntax=true}
-
-below your code block, with max three indentations.
-
-Add it to the top of the Markdown file to enable all over the place.
-
 ## Requirements Are OK
     
     require 'sinatra'
-    require 'syntax'
     
 ## Formatting
 
