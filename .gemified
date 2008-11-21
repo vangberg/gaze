@@ -1,0 +1,9 @@
+--- 
+:version: "0.1"
+:author: Harry Vangberg
+:summary: Serves up a folder of Markdown or Textile formatted files via Sinatra
+:dependencies: 
+- sinatra
+- haml
+:homepage: http://github.com/ichverstehe/gaze
+:name: gaze
