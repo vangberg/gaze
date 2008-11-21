@@ -47,7 +47,7 @@ get '/pages/:page.:ext' do
     filename = "#{params[:page]}.#{params[:ext]}"
     File.open(filename) do |file|
       @output = case params[:ext]
-                when "markdown"
+                when "markdown", "md"
                   Maruku.new(file.read).to_html
                 when "textile"
                   RedCloth.new(file.read).to_html
