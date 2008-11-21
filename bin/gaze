@@ -85,12 +85,12 @@ __END__
       %a{:href => "/pages/#{page}"}= page
 
 @@page
-= @output
-%hr
 %strong
   %a{:href => '/pages/'}= get_dir
 - pages.each do |page|
   %a{:href => "/pages/#{page}"}= page
+%hr
+= @output
 
 @@styles
 body
