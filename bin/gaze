@@ -27,7 +27,7 @@ helpers do
     File.basename(Dir.getwd)
   end
   def pages
-    (Dir["*.markdown"] + Dir["*.textile"]).sort
+    (Dir["*.md"] + Dir["*.markdown"] + Dir["*.textile"]).sort
   end
 end
 
