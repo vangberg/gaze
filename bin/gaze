@@ -82,7 +82,7 @@ __END__
       %a{:href => 'http://github.com/ichverstehe/gaze'} gaze
 
 @@pages
-%h1= get_dir
+%h1= get_dir.gsub(/_/, ' ')
 %ul
   - pages.each do |page|
     %li
