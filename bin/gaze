@@ -24,7 +24,7 @@ end
 
 helpers do
   def get_dir
-    File.basename(Dir.getwd)
+    File.basename(Dir.getwd).gsub(/_/, ' ')
   end
   def pages
     (Dir["*.md"] + Dir["*.markdown"] + Dir["*.textile"]).sort
@@ -82,7 +82,7 @@ __END__
       %a{:href => 'http://github.com/ichverstehe/gaze'} gaze
 
 @@pages
-%h1= get_dir.gsub(/_/, ' ')
+%h1= get_dir
 %ul
   - pages.each do |page|
     %li
