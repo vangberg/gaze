@@ -62,7 +62,8 @@ get '/pages/:page.:ext' do
 end
 
 get '/stylesheet.css' do
-  sass :styles
+  content_type 'text/css', :charset => 'utf-8'
+  sass :stylesheet
 end
 
 use_in_file_templates!
@@ -96,7 +97,7 @@ __END__
 %hr
 ~ @output
 
-@@styles
+@@stylesheet
 body
   :font-family "Lucida Grande", sans-serif
   :font-size 12px
