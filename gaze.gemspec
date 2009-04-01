@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gaze}
-  s.version = "0.1.1"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Harry Vangberg", "Mikkel Malmberg"]
-  s.date = %q{2008-11-22}
+  s.date = %q{2009-04-01}
   s.default_executable = %q{gaze}
   s.email = %q{ichverstehe@gmail.com}
   s.executables = ["gaze"]
@@ -20,11 +20,7 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 2
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<sinatra>, [">= 0.3.2"])
-    else
-      s.add_dependency(%q<sinatra>, [">= 0.3.2"])
-    end
+    s.add_dependency(%q<sinatra>, [">= 0.3.2"])
   else
     s.add_dependency(%q<sinatra>, [">= 0.3.2"])
   end
