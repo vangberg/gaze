@@ -69,6 +69,7 @@ end
 __END__
 
 @@layout
+!!! XML
 !!!
 %html
   %head
