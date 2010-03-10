@@ -3,7 +3,7 @@ A very mellow start to begin with, and so it goes:
 
 ## Installation
 
-    $ sudo gem install ichverstehe-gaze --source=http://gems.github.com
+    $ gem install gaze
     
 ## Use
 
@@ -26,7 +26,7 @@ gaze supports Markdown or Textile. Use the one you like best. Or both.
     require 'RedCloth' # Textile
 
 ## Punch me! With a Fork!
-Copyright (c) 2008 Harry Vangberg, Mikkel Malmberg
+Copyright (c) 2008, 2009, 2010 Harry Vangberg, Mikkel Malmberg
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

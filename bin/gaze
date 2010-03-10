@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 require 'sinatra'
+
+set :run, true
 
 configure do
   # Format options
@@ -10,7 +11,7 @@ configure do
     rescue LoadError => e
       puts <<-MSG
 To format #{name} as well:
-$ sudo gem install #{gem}
+$ gem install #{gem}
 It is not needed though.
 MSG
     end
