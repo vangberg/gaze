@@ -2,9 +2,6 @@
 require 'rubygems'
 require 'sinatra'
 
-set :public, File.join(File.dirname(__FILE__) +'/../public/')
-set :run, true
-
 configure do
   # Format options
   {:Markdown => 'maruku', :Textile => 'RedCloth'}.each do |name, gem|
@@ -26,6 +23,7 @@ helpers do
   def title
     File.basename(Dir.getwd).gsub(/_/, ' ')
   end
+
   def pages
     (Dir["*.md"] + Dir["*.markdown"] + Dir["*.textile"]).sort
   end
@@ -36,7 +34,7 @@ get '/' do
 end
 
 get '/pages/' do
-  # If there is only one markdown file present, serve that instantly.
+  # If there is only one file present, serve that instantly.
   redirect "#{pages.first}" if pages.size == 1 
 
   haml :pages
