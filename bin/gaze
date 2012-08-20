@@ -36,7 +36,7 @@ end
 
 get '/pages/' do
   # If there is only one file present, serve that instantly.
-  redirect "#{pages.first}" if pages.size == 1 
+  redirect "/pages/#{pages.first}" if pages.size == 1 
 
   haml :pages
 end
