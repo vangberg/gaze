@@ -5,7 +5,7 @@ set :run, true
 
 configure do
   # Format options
-  {:Markdown => 'maruku', :Textile => 'RedCloth'}.each do |name, gem|
+  {:Markdown => 'maruku', :Textile => 'RedCloth', :Orgmode => 'org-ruby'}.each do |name, gem|
     begin
       require "#{gem}"
     rescue LoadError => e
@@ -26,7 +26,7 @@ helpers do
   end
 
   def pages
-    (Dir["*.md"] + Dir["*.markdown"] + Dir["*.textile"]).sort
+    (Dir["*.md"] + Dir["*.markdown"] + Dir["*.textile"] + Dir["*.org"]).sort
   end
 end
 
@@ -50,6 +50,8 @@ get '/pages/:page.:ext' do
                   Maruku.new(file.read).to_html
                 when "textile"
                   RedCloth.new(file.read).to_html
+                when "org"
+                  Orgmode::Parser.new(file.read).to_html
                 else
                   file.read
                 end
